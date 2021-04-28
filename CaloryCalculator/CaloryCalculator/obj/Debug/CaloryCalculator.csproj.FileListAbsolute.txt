@@ -1,0 +1,13 @@
+D:\TeamWork\CaloryCalculator\CaloryCalculator\bin\Debug\CaloryCalculator.exe.config
+D:\TeamWork\CaloryCalculator\CaloryCalculator\bin\Debug\CaloryCalculator.exe
+D:\TeamWork\CaloryCalculator\CaloryCalculator\bin\Debug\CaloryCalculator.pdb
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csprojAssemblyReference.cache
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.AddEditDelDishF.resources
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.DishesCaloryCalcF.resources
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.Form1.resources
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.MassCalcF.resources
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.Properties.Resources.resources
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.GenerateResource.cache
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.CoreCompileInputs.cache
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.exe
+D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.pdb
