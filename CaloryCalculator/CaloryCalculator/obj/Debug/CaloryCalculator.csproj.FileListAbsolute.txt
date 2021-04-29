@@ -11,3 +11,16 @@ D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.
 D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.CoreCompileInputs.cache
 D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.exe
 D:\TeamWork\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.pdb
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\CaloryCalculator.exe.config
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\CaloryCalculator.exe
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\CaloryCalculator.pdb
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csprojAssemblyReference.cache
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.AddEditDelDishF.resources
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.DishesCaloryCalcF.resources
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.Form1.resources
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.MassCalcF.resources
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.Properties.Resources.resources
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.GenerateResource.cache
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.exe
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.pdb
