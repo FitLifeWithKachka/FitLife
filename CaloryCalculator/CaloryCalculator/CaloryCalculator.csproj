@@ -70,6 +70,7 @@
     <Compile Include="DishesCaloryCalcF.Designer.cs">
       <DependentUpon>DishesCaloryCalcF.cs</DependentUpon>
     </Compile>
+    <Compile Include="DishInfo.cs" />
     <Compile Include="FitLifeData.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

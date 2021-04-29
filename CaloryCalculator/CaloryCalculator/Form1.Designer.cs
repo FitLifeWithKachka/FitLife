@@ -112,7 +112,7 @@ namespace CaloryCalculator
             this.tcMain.Controls.Add(this.tabPage1);
             this.tcMain.Controls.Add(this.tabPage2);
             this.tcMain.Controls.Add(this.tabPage3);
-            this.tcMain.Location = new System.Drawing.Point(13, 12);
+            this.tcMain.Location = new System.Drawing.Point(12, 12);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
             this.tcMain.Size = new System.Drawing.Size(696, 446);
@@ -254,6 +254,7 @@ namespace CaloryCalculator
             this.lbActWithDishes.Name = "lbActWithDishes";
             this.lbActWithDishes.Size = new System.Drawing.Size(238, 352);
             this.lbActWithDishes.TabIndex = 0;
+            this.lbActWithDishes.SelectedIndexChanged += new System.EventHandler(this.lbActWithDishes_SelectedIndexChanged);
             // 
             // tabPage3
             // 
