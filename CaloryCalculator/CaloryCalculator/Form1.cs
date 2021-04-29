@@ -12,9 +12,32 @@ namespace CaloryCalculator
 {
     public partial class Form1 : Form
     {
+
+        BindingList<Product> _products = new BindingList<Product>();
         public Form1()
         {
             InitializeComponent();
+
+            foreach (var item in new FitLifeDataContent().Products)
+            {
+                _products.Add(item);
+            }
+
+            lbActWithProducts.DataSource = _products;
+            lbActWithProducts.DisplayMember = "Name";
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
         }
+
+        private void lbActWithProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblProductsProductName.Text = ((Product)lbActWithProducts.SelectedItem).Name;
+            lblProductsProductCalories.Text = ((Product)lbActWithProducts.SelectedItem).Calories.ToString();
+        }
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
     }
 }

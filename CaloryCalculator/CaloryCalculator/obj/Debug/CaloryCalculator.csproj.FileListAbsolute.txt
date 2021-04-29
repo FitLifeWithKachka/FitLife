@@ -24,3 +24,8 @@ D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCa
 D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.exe
 D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.pdb
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.CopyComplete

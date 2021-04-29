@@ -37,17 +37,17 @@ namespace CaloryCalculator
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lbActWithDishes = new System.Windows.Forms.ListBox();
-            this.lblDishesName = new System.Windows.Forms.Label();
-            this.lblDishesDishName = new System.Windows.Forms.Label();
+            this.btnDishesDelete = new System.Windows.Forms.Button();
+            this.btnDishesEdit = new System.Windows.Forms.Button();
+            this.btnDishesAdd = new System.Windows.Forms.Button();
+            this.lbDishesProducts = new System.Windows.Forms.ListBox();
+            this.lblDishesProducts = new System.Windows.Forms.Label();
             this.lblDishesDishCalories = new System.Windows.Forms.Label();
             this.lblDishesCalories = new System.Windows.Forms.Label();
-            this.lblDishesProducts = new System.Windows.Forms.Label();
-            this.lbDishesProducts = new System.Windows.Forms.ListBox();
-            this.btnDishesAdd = new System.Windows.Forms.Button();
-            this.btnDishesEdit = new System.Windows.Forms.Button();
-            this.btnDishesDelete = new System.Windows.Forms.Button();
+            this.lblDishesDishName = new System.Windows.Forms.Label();
+            this.lblDishesName = new System.Windows.Forms.Label();
+            this.lbActWithDishes = new System.Windows.Forms.ListBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnProductsDelete = new System.Windows.Forms.Button();
             this.btnProductsEdit = new System.Windows.Forms.Button();
             this.btnProductsAdd = new System.Windows.Forms.Button();
@@ -154,52 +154,56 @@ namespace CaloryCalculator
             this.tabPage2.Text = "Dishes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // btnDishesDelete
             // 
-            this.tabPage3.Controls.Add(this.btnProductsDelete);
-            this.tabPage3.Controls.Add(this.btnProductsEdit);
-            this.tabPage3.Controls.Add(this.btnProductsAdd);
-            this.tabPage3.Controls.Add(this.lblProductsProductCalories);
-            this.tabPage3.Controls.Add(this.lblProductsCalories);
-            this.tabPage3.Controls.Add(this.lblProductsProductName);
-            this.tabPage3.Controls.Add(this.lblProductsName);
-            this.tabPage3.Controls.Add(this.lbActWithProducts);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(688, 417);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Products";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.btnDishesDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDishesDelete.Location = new System.Drawing.Point(473, 364);
+            this.btnDishesDelete.Name = "btnDishesDelete";
+            this.btnDishesDelete.Size = new System.Drawing.Size(183, 39);
+            this.btnDishesDelete.TabIndex = 9;
+            this.btnDishesDelete.Text = "Delete";
+            this.btnDishesDelete.UseVisualStyleBackColor = true;
             // 
-            // lbActWithDishes
+            // btnDishesEdit
             // 
-            this.lbActWithDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbActWithDishes.FormattingEnabled = true;
-            this.lbActWithDishes.ItemHeight = 29;
-            this.lbActWithDishes.Location = new System.Drawing.Point(6, 6);
-            this.lbActWithDishes.Name = "lbActWithDishes";
-            this.lbActWithDishes.Size = new System.Drawing.Size(238, 352);
-            this.lbActWithDishes.TabIndex = 0;
+            this.btnDishesEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDishesEdit.Location = new System.Drawing.Point(244, 364);
+            this.btnDishesEdit.Name = "btnDishesEdit";
+            this.btnDishesEdit.Size = new System.Drawing.Size(183, 39);
+            this.btnDishesEdit.TabIndex = 8;
+            this.btnDishesEdit.Text = "Edit";
+            this.btnDishesEdit.UseVisualStyleBackColor = true;
             // 
-            // lblDishesName
+            // btnDishesAdd
             // 
-            this.lblDishesName.AutoSize = true;
-            this.lblDishesName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDishesName.Location = new System.Drawing.Point(266, 21);
-            this.lblDishesName.Name = "lblDishesName";
-            this.lblDishesName.Size = new System.Drawing.Size(78, 29);
-            this.lblDishesName.TabIndex = 1;
-            this.lblDishesName.Text = "Name";
+            this.btnDishesAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDishesAdd.Location = new System.Drawing.Point(6, 364);
+            this.btnDishesAdd.Name = "btnDishesAdd";
+            this.btnDishesAdd.Size = new System.Drawing.Size(183, 39);
+            this.btnDishesAdd.TabIndex = 7;
+            this.btnDishesAdd.Text = "Add";
+            this.btnDishesAdd.UseVisualStyleBackColor = true;
             // 
-            // lblDishesDishName
+            // lbDishesProducts
             // 
-            this.lblDishesDishName.AutoSize = true;
-            this.lblDishesDishName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDishesDishName.Location = new System.Drawing.Point(376, 21);
-            this.lblDishesDishName.Name = "lblDishesDishName";
-            this.lblDishesDishName.Size = new System.Drawing.Size(78, 29);
-            this.lblDishesDishName.TabIndex = 2;
-            this.lblDishesDishName.Text = "Name";
+            this.lbDishesProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbDishesProducts.FormattingEnabled = true;
+            this.lbDishesProducts.ItemHeight = 29;
+            this.lbDishesProducts.Location = new System.Drawing.Point(381, 133);
+            this.lbDishesProducts.Name = "lbDishesProducts";
+            this.lbDishesProducts.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lbDishesProducts.Size = new System.Drawing.Size(275, 207);
+            this.lbDishesProducts.TabIndex = 6;
+            // 
+            // lblDishesProducts
+            // 
+            this.lblDishesProducts.AutoSize = true;
+            this.lblDishesProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDishesProducts.Location = new System.Drawing.Point(250, 133);
+            this.lblDishesProducts.Name = "lblDishesProducts";
+            this.lblDishesProducts.Size = new System.Drawing.Size(108, 29);
+            this.lblDishesProducts.TabIndex = 5;
+            this.lblDishesProducts.Text = "Products";
             // 
             // lblDishesDishCalories
             // 
@@ -221,56 +225,52 @@ namespace CaloryCalculator
             this.lblDishesCalories.TabIndex = 3;
             this.lblDishesCalories.Text = "Calories";
             // 
-            // lblDishesProducts
+            // lblDishesDishName
             // 
-            this.lblDishesProducts.AutoSize = true;
-            this.lblDishesProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDishesProducts.Location = new System.Drawing.Point(250, 133);
-            this.lblDishesProducts.Name = "lblDishesProducts";
-            this.lblDishesProducts.Size = new System.Drawing.Size(108, 29);
-            this.lblDishesProducts.TabIndex = 5;
-            this.lblDishesProducts.Text = "Products";
+            this.lblDishesDishName.AutoSize = true;
+            this.lblDishesDishName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDishesDishName.Location = new System.Drawing.Point(376, 21);
+            this.lblDishesDishName.Name = "lblDishesDishName";
+            this.lblDishesDishName.Size = new System.Drawing.Size(78, 29);
+            this.lblDishesDishName.TabIndex = 2;
+            this.lblDishesDishName.Text = "Name";
             // 
-            // lbDishesProducts
+            // lblDishesName
             // 
-            this.lbDishesProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbDishesProducts.FormattingEnabled = true;
-            this.lbDishesProducts.ItemHeight = 29;
-            this.lbDishesProducts.Location = new System.Drawing.Point(381, 133);
-            this.lbDishesProducts.Name = "lbDishesProducts";
-            this.lbDishesProducts.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lbDishesProducts.Size = new System.Drawing.Size(275, 207);
-            this.lbDishesProducts.TabIndex = 6;
+            this.lblDishesName.AutoSize = true;
+            this.lblDishesName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDishesName.Location = new System.Drawing.Point(266, 21);
+            this.lblDishesName.Name = "lblDishesName";
+            this.lblDishesName.Size = new System.Drawing.Size(78, 29);
+            this.lblDishesName.TabIndex = 1;
+            this.lblDishesName.Text = "Name";
             // 
-            // btnDishesAdd
+            // lbActWithDishes
             // 
-            this.btnDishesAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDishesAdd.Location = new System.Drawing.Point(6, 364);
-            this.btnDishesAdd.Name = "btnDishesAdd";
-            this.btnDishesAdd.Size = new System.Drawing.Size(183, 39);
-            this.btnDishesAdd.TabIndex = 7;
-            this.btnDishesAdd.Text = "Add";
-            this.btnDishesAdd.UseVisualStyleBackColor = true;
+            this.lbActWithDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbActWithDishes.FormattingEnabled = true;
+            this.lbActWithDishes.ItemHeight = 29;
+            this.lbActWithDishes.Location = new System.Drawing.Point(6, 6);
+            this.lbActWithDishes.Name = "lbActWithDishes";
+            this.lbActWithDishes.Size = new System.Drawing.Size(238, 352);
+            this.lbActWithDishes.TabIndex = 0;
             // 
-            // btnDishesEdit
+            // tabPage3
             // 
-            this.btnDishesEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDishesEdit.Location = new System.Drawing.Point(244, 364);
-            this.btnDishesEdit.Name = "btnDishesEdit";
-            this.btnDishesEdit.Size = new System.Drawing.Size(183, 39);
-            this.btnDishesEdit.TabIndex = 8;
-            this.btnDishesEdit.Text = "Edit";
-            this.btnDishesEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnDishesDelete
-            // 
-            this.btnDishesDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDishesDelete.Location = new System.Drawing.Point(473, 364);
-            this.btnDishesDelete.Name = "btnDishesDelete";
-            this.btnDishesDelete.Size = new System.Drawing.Size(183, 39);
-            this.btnDishesDelete.TabIndex = 9;
-            this.btnDishesDelete.Text = "Delete";
-            this.btnDishesDelete.UseVisualStyleBackColor = true;
+            this.tabPage3.Controls.Add(this.btnProductsDelete);
+            this.tabPage3.Controls.Add(this.btnProductsEdit);
+            this.tabPage3.Controls.Add(this.btnProductsAdd);
+            this.tabPage3.Controls.Add(this.lblProductsProductCalories);
+            this.tabPage3.Controls.Add(this.lblProductsCalories);
+            this.tabPage3.Controls.Add(this.lblProductsProductName);
+            this.tabPage3.Controls.Add(this.lblProductsName);
+            this.tabPage3.Controls.Add(this.lbActWithProducts);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(688, 417);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Products";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // btnProductsDelete
             // 
@@ -351,6 +351,7 @@ namespace CaloryCalculator
             this.lbActWithProducts.Name = "lbActWithProducts";
             this.lbActWithProducts.Size = new System.Drawing.Size(238, 352);
             this.lbActWithProducts.TabIndex = 10;
+            this.lbActWithProducts.SelectedIndexChanged += new System.EventHandler(this.lbActWithProducts_SelectedIndexChanged);
             // 
             // Form1
             // 
