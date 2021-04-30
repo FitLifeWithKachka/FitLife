@@ -34,17 +34,23 @@ namespace CaloryCalculator
 
         private void UpdateMyData()
         {
-            var fc = new FitLifeDataContent();
-
-            foreach (var item in fc.Products)
+            using (var fc = new FitLifeDataContent())
             {
-                _products.Add(item);
+                _products.Clear();
+                _dishes.Clear();
+                foreach (var item in fc.Products)
+                {
+                    _products.Add(item);
+                }
+
+                foreach (var item in fc.Dishes)
+                {
+                    _dishes.Add(new DishInfo(item));
+                }
             }
 
-            foreach (var item in fc.Dishes)
-            {
-                _dishes.Add(new DishInfo(item));
-            }
+            lbActWithDishes_SelectedIndexChanged(this, new EventArgs());
+            lbActWithProducts_SelectedIndexChanged(this, new EventArgs());
         }
 
         private void lbActWithProducts_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,6 +67,40 @@ namespace CaloryCalculator
             lbDishesProducts.DataSource = ((DishInfo)lbActWithDishes.SelectedItem).Products;
             lbDishesProducts.DisplayMember = "Name";
             
+        }
+
+        private void btnProductsAdd_Click(object sender, EventArgs e)
+        {
+            using (var addingForm = new AddingProductForm())
+            {
+                addingForm.ShowDialog();
+            }
+
+            UpdateMyData();
+        }
+
+        private void btnProductsEdit_Click(object sender, EventArgs e)
+        {
+            using (var addingForm = new AddingProductForm((Product)lbActWithProducts.SelectedItem))
+            {
+                addingForm.ShowDialog();
+            }
+
+            UpdateMyData();
+        }
+
+        private void btnProductsDelete_Click(object sender, EventArgs e)
+        {
+            using (var fc = new FitLifeDataContent())
+            {
+                var prod = (Product)lbActWithProducts.SelectedItem;
+                if (!(DialogResult.Yes == MessageBox.Show($"Are u sure about deleting   <{prod.Name}>   element", "Deleting", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)))
+                    return;
+
+                fc.Products.Remove(fc.Products.Find(prod.Id));
+                fc.SaveChanges();
+                UpdateMyData();
+            }
         }
 
 

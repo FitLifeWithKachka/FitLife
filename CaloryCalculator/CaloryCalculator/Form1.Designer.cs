@@ -282,6 +282,7 @@ namespace CaloryCalculator
             this.btnProductsDelete.TabIndex = 19;
             this.btnProductsDelete.Text = "Delete";
             this.btnProductsDelete.UseVisualStyleBackColor = true;
+            this.btnProductsDelete.Click += new System.EventHandler(this.btnProductsDelete_Click);
             // 
             // btnProductsEdit
             // 
@@ -292,6 +293,7 @@ namespace CaloryCalculator
             this.btnProductsEdit.TabIndex = 18;
             this.btnProductsEdit.Text = "Edit";
             this.btnProductsEdit.UseVisualStyleBackColor = true;
+            this.btnProductsEdit.Click += new System.EventHandler(this.btnProductsEdit_Click);
             // 
             // btnProductsAdd
             // 
@@ -302,6 +304,7 @@ namespace CaloryCalculator
             this.btnProductsAdd.TabIndex = 17;
             this.btnProductsAdd.Text = "Add";
             this.btnProductsAdd.UseVisualStyleBackColor = true;
+            this.btnProductsAdd.Click += new System.EventHandler(this.btnProductsAdd_Click);
             // 
             // lblProductsProductCalories
             // 

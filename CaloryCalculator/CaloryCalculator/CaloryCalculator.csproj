@@ -55,11 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEditDelDishF.cs">
+    <Compile Include="AddingProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEditDelDishF.Designer.cs">
-      <DependentUpon>AddEditDelDishF.cs</DependentUpon>
+    <Compile Include="AddingProductForm.Designer.cs">
+      <DependentUpon>AddingProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dish.cs">
       <DependentUpon>FitLifeData.tt</DependentUpon>
@@ -103,8 +103,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddEditDelDishF.resx">
-      <DependentUpon>AddEditDelDishF.cs</DependentUpon>
+    <EmbeddedResource Include="AddingProductForm.resx">
+      <DependentUpon>AddingProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DishesCaloryCalcF.resx">
       <DependentUpon>DishesCaloryCalcF.cs</DependentUpon>
