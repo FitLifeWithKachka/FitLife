@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CaloryCalculator
 {
-    class DishInfo
+    public class DishInfo
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -30,6 +31,5 @@ namespace CaloryCalculator
                 _products.Add(tmpDB.Find(p => p.Id.ToString() == item));
             }
         }
-
     }
 }

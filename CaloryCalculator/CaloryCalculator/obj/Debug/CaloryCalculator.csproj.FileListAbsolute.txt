@@ -29,3 +29,4 @@ D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\EntityFr
 D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.csproj.CopyComplete
 D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.AddingProductForm.resources
+D:\Documents\GitHub\FitLife\CaloryCalculator\CaloryCalculator\obj\Debug\CaloryCalculator.AddingDishForm.resources

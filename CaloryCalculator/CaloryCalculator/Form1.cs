@@ -49,8 +49,12 @@ namespace CaloryCalculator
                 }
             }
 
-            lbActWithDishes_SelectedIndexChanged(this, new EventArgs());
-            lbActWithProducts_SelectedIndexChanged(this, new EventArgs());
+            if (lbActWithProducts.SelectedItem != null )
+                lbActWithProducts_SelectedIndexChanged(this, new EventArgs());
+
+            if (lbActWithDishes.SelectedItem != null)
+                lbActWithDishes_SelectedIndexChanged(this, new EventArgs());
+
         }
 
         private void lbActWithProducts_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,8 +70,8 @@ namespace CaloryCalculator
 
             lbDishesProducts.DataSource = ((DishInfo)lbActWithDishes.SelectedItem).Products;
             lbDishesProducts.DisplayMember = "Name";
-            
-        }
+
+        } //пофиксить - при удалении последнего блюда в лб и тб остаются его данные
 
         private void btnProductsAdd_Click(object sender, EventArgs e)
         {
@@ -91,11 +95,16 @@ namespace CaloryCalculator
 
         private void btnProductsDelete_Click(object sender, EventArgs e)
         {
+            if (lbActWithProducts.SelectedItem == null)
+                return;
+
             using (var fc = new FitLifeDataContent())
             {
                 var prod = (Product)lbActWithProducts.SelectedItem;
-                if (!(DialogResult.Yes == MessageBox.Show($"Are u sure about deleting   <{prod.Name}>   element", "Deleting", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)))
+                if (!(DialogResult.Yes == MessageBox.Show($"Are u sure about deleting   <{prod.Name}>   element\nAll dishes that include this product will be deleted", "Deleting", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)))
                     return;
+
+                DishKiller(fc, prod.Id);
 
                 fc.Products.Remove(fc.Products.Find(prod.Id));
                 fc.SaveChanges();
@@ -103,9 +112,61 @@ namespace CaloryCalculator
             }
         }
 
+        private void DishKiller(FitLifeDataContent fc ,int id)
+        {
+            foreach (var item in _dishes)
+            {
+                foreach (var prod in item.Products)
+                {
+                    if (prod.Id == id)
+                        fc.Dishes.Remove(fc.Dishes.Find(item.Id));
+                }
+            }
+        }
+        private void btnDishesAdd_Click(object sender, EventArgs e)
+        {
+            using (var adf = new AddingDishForm(_products))
+            {
+                adf.ShowDialog();
+            }
+
+            UpdateMyData();
+        }
+
+        private void btnDishesEdit_Click(object sender, EventArgs e)
+        {
+            using (var adf = new AddingDishForm(_products, (DishInfo)lbActWithDishes.SelectedItem))
+            {
+                adf.ShowDialog();
+            }
+
+            UpdateMyData();
+        }
+
+        private void btnDishesDelete_Click(object sender, EventArgs e)
+        {
+            if (lbActWithDishes.SelectedItem == null)
+                return;
+
+            using (var fc = new FitLifeDataContent())
+            {
+                var dish = (DishInfo)lbActWithDishes.SelectedItem;
+                if (!(DialogResult.Yes == MessageBox.Show($"Are u sure about deleting   <{dish.Name}>   element", "Deleting", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)))
+                    return;
+
+                fc.Dishes.Remove(fc.Dishes.Find(dish.Id));
+                fc.SaveChanges();
+                UpdateMyData();
+            }
+        }
 
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+        private void btnMassCalc_Click(object sender, EventArgs e)
+        {
+            using (var mc = new MassCalcF())
+            {
+                mc.ShowDialog();
+            }
+        }
     }
 }

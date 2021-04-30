@@ -107,6 +107,7 @@ namespace CaloryCalculator
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lblCalories);
             this.Controls.Add(this.lblName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddingProductForm";
             this.Text = "AddingProductForm";
             this.ResumeLayout(false);

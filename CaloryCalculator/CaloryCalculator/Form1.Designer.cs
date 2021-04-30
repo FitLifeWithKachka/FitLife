@@ -97,6 +97,7 @@ namespace CaloryCalculator
             this.btnMassCalc.TabIndex = 6;
             this.btnMassCalc.Text = "MassCalculator";
             this.btnMassCalc.UseVisualStyleBackColor = true;
+            this.btnMassCalc.Click += new System.EventHandler(this.btnMassCalc_Click);
             // 
             // btnAddCalc
             // 
@@ -163,6 +164,7 @@ namespace CaloryCalculator
             this.btnDishesDelete.TabIndex = 9;
             this.btnDishesDelete.Text = "Delete";
             this.btnDishesDelete.UseVisualStyleBackColor = true;
+            this.btnDishesDelete.Click += new System.EventHandler(this.btnDishesDelete_Click);
             // 
             // btnDishesEdit
             // 
@@ -173,6 +175,7 @@ namespace CaloryCalculator
             this.btnDishesEdit.TabIndex = 8;
             this.btnDishesEdit.Text = "Edit";
             this.btnDishesEdit.UseVisualStyleBackColor = true;
+            this.btnDishesEdit.Click += new System.EventHandler(this.btnDishesEdit_Click);
             // 
             // btnDishesAdd
             // 
@@ -183,6 +186,7 @@ namespace CaloryCalculator
             this.btnDishesAdd.TabIndex = 7;
             this.btnDishesAdd.Text = "Add";
             this.btnDishesAdd.UseVisualStyleBackColor = true;
+            this.btnDishesAdd.Click += new System.EventHandler(this.btnDishesAdd_Click);
             // 
             // lbDishesProducts
             // 
@@ -363,6 +367,7 @@ namespace CaloryCalculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 464);
             this.Controls.Add(this.tcMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Main";
             this.tcMain.ResumeLayout(false);
