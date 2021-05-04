@@ -31,7 +31,23 @@ namespace CaloryCalculator
 
 
         }
+        public string IncrW
+        {
+            get { return txtIncW.Text; }
+            set { txtIncW.Text = value; }
+        }
 
+        public string SaveW
+        {
+            get { return txtSaveW.Text; }
+            set { txtSaveW.Text = value; }
+        }
+
+        public string RedW
+        {
+            get { return txtRedW.Text; }
+            set { txtRedW.Text = value; }
+        }
         private void UpdateMyData()
         {
             using (var fc = new FitLifeDataContent())
@@ -110,6 +126,12 @@ namespace CaloryCalculator
                 fc.SaveChanges();
                 UpdateMyData();
             }
+
+            if (lbActWithProducts.Items.Count == 0)
+            {
+                lblProductsProductCalories.Text = string.Empty;
+                lblProductsProductName.Text = string.Empty;
+            }
         }
 
         private void DishKiller(FitLifeDataContent fc ,int id)
@@ -158,15 +180,49 @@ namespace CaloryCalculator
                 fc.SaveChanges();
                 UpdateMyData();
             }
+
+            if (lbActWithDishes.Items.Count == 0)
+            {
+                lbDishesProducts.Items?.Clear();
+                lblDishesDishCalories.Text = string.Empty;
+                lblDishesDishName.Text = string.Empty;
+            }
+
         }
 
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         private void btnMassCalc_Click(object sender, EventArgs e)
         {
-            using (var mc = new MassCalcF())
+            MassCalcF mc = new MassCalcF();
+            
+                this.Hide();
+                mc.Closed += (s, args) => this.Close();
+                mc.Show();
+            
+        }
+
+        private void Finder()
+        {
+            lbDish.Items.Clear();
+            foreach (var item in lbActWithDishes.Items)
             {
-                mc.ShowDialog();
+                if ( ((DishInfo)item).Name.Contains(tbDishS.Text) )
+                {
+                    lbDish.Items.Add(item);
+                }
             }
+        }
+
+        private void tbDishS_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tbDishS.Text))
+            {
+                lbDish.Items.Clear();
+                return;
+            }
+
+
+            Task.Run(Finder);
         }
     }
 }

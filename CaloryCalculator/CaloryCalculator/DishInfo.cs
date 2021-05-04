@@ -31,5 +31,10 @@ namespace CaloryCalculator
                 _products.Add(tmpDB.Find(p => p.Id.ToString() == item));
             }
         }
+
+        public override string ToString()
+        {
+            return $"{Name}    {Calories}";
+        }
     }
 }

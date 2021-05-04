@@ -116,6 +116,12 @@ namespace CaloryCalculator
                 return;
             }
 
+            if (lbIngredients.Items.Count == 0)
+            {
+                MessageBox.Show("Choose ingridients");
+                return;
+            }
+
             string tmpIds = string.Empty;
 
             foreach (var item in lbIngredients.Items)
@@ -148,5 +154,6 @@ namespace CaloryCalculator
             }
 
         }
+
     }
 }

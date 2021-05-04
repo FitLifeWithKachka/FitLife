@@ -29,13 +29,23 @@ namespace CaloryCalculator
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbDishesList = new System.Windows.Forms.ListBox();
-            this.lbIngrList = new System.Windows.Forms.ListBox();
-            this.btnAddProduct = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnMassCalc = new System.Windows.Forms.Button();
-            this.btnAddCalc = new System.Windows.Forms.Button();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbDish = new System.Windows.Forms.ListBox();
+            this.tbDishS = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtRedW = new System.Windows.Forms.TextBox();
+            this.txtSaveW = new System.Windows.Forms.TextBox();
+            this.txtIncW = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnDishesDelete = new System.Windows.Forms.Button();
             this.btnDishesEdit = new System.Windows.Forms.Button();
@@ -58,55 +68,23 @@ namespace CaloryCalculator
             this.lbActWithProducts = new System.Windows.Forms.ListBox();
             this.tcMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbDishesList
-            // 
-            this.lbDishesList.FormattingEnabled = true;
-            this.lbDishesList.ItemHeight = 16;
-            this.lbDishesList.Location = new System.Drawing.Point(4, 6);
-            this.lbDishesList.Name = "lbDishesList";
-            this.lbDishesList.Size = new System.Drawing.Size(318, 404);
-            this.lbDishesList.TabIndex = 0;
-            // 
-            // lbIngrList
-            // 
-            this.lbIngrList.FormattingEnabled = true;
-            this.lbIngrList.ItemHeight = 16;
-            this.lbIngrList.Location = new System.Drawing.Point(346, 6);
-            this.lbIngrList.Name = "lbIngrList";
-            this.lbIngrList.Size = new System.Drawing.Size(318, 276);
-            this.lbIngrList.TabIndex = 1;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.Location = new System.Drawing.Point(346, 349);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(139, 55);
-            this.btnAddProduct.TabIndex = 2;
-            this.btnAddProduct.Text = "Calculate";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
-            // 
             // btnMassCalc
             // 
-            this.btnMassCalc.Location = new System.Drawing.Point(507, 349);
+            this.btnMassCalc.Location = new System.Drawing.Point(432, 350);
             this.btnMassCalc.Name = "btnMassCalc";
             this.btnMassCalc.Size = new System.Drawing.Size(139, 55);
             this.btnMassCalc.TabIndex = 6;
-            this.btnMassCalc.Text = "MassCalculator";
+            this.btnMassCalc.Text = "Enter your data";
             this.btnMassCalc.UseVisualStyleBackColor = true;
             this.btnMassCalc.Click += new System.EventHandler(this.btnMassCalc_Click);
-            // 
-            // btnAddCalc
-            // 
-            this.btnAddCalc.Location = new System.Drawing.Point(346, 288);
-            this.btnAddCalc.Name = "btnAddCalc";
-            this.btnAddCalc.Size = new System.Drawing.Size(139, 55);
-            this.btnAddCalc.TabIndex = 7;
-            this.btnAddCalc.Text = "Add to Calc List";
-            this.btnAddCalc.UseVisualStyleBackColor = true;
             // 
             // tcMain
             // 
@@ -121,11 +99,20 @@ namespace CaloryCalculator
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.lbIngrList);
-            this.tabPage1.Controls.Add(this.btnAddCalc);
-            this.tabPage1.Controls.Add(this.lbDishesList);
+            this.tabPage1.Controls.Add(this.lbDish);
+            this.tabPage1.Controls.Add(this.tbDishS);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.pictureBox4);
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.pictureBox2);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.txtRedW);
+            this.tabPage1.Controls.Add(this.txtSaveW);
+            this.tabPage1.Controls.Add(this.txtIncW);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.btnMassCalc);
-            this.tabPage1.Controls.Add(this.btnAddProduct);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -133,6 +120,126 @@ namespace CaloryCalculator
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lbDish
+            // 
+            this.lbDish.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbDish.FormattingEnabled = true;
+            this.lbDish.ItemHeight = 20;
+            this.lbDish.Location = new System.Drawing.Point(349, 89);
+            this.lbDish.Name = "lbDish";
+            this.lbDish.Size = new System.Drawing.Size(251, 104);
+            this.lbDish.TabIndex = 27;
+            // 
+            // tbDishS
+            // 
+            this.tbDishS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbDishS.Location = new System.Drawing.Point(349, 44);
+            this.tbDishS.Name = "tbDishS";
+            this.tbDishS.Size = new System.Drawing.Size(251, 27);
+            this.tbDishS.TabIndex = 25;
+            this.tbDishS.TextChanged += new System.EventHandler(this.tbDishS_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(415, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Dish Searcher";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(452, 208);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 82);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 23;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(582, 208);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 82);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(306, 208);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(107, 82);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(280, 367);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtRedW
+            // 
+            this.txtRedW.Location = new System.Drawing.Point(582, 314);
+            this.txtRedW.Name = "txtRedW";
+            this.txtRedW.ReadOnly = true;
+            this.txtRedW.Size = new System.Drawing.Size(100, 22);
+            this.txtRedW.TabIndex = 19;
+            // 
+            // txtSaveW
+            // 
+            this.txtSaveW.Location = new System.Drawing.Point(452, 314);
+            this.txtSaveW.Name = "txtSaveW";
+            this.txtSaveW.ReadOnly = true;
+            this.txtSaveW.Size = new System.Drawing.Size(100, 22);
+            this.txtSaveW.TabIndex = 18;
+            // 
+            // txtIncW
+            // 
+            this.txtIncW.Location = new System.Drawing.Point(306, 314);
+            this.txtIncW.Name = "txtIncW";
+            this.txtIncW.ReadOnly = true;
+            this.txtIncW.Size = new System.Drawing.Size(100, 22);
+            this.txtIncW.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(577, 293);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 17);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Reduce Weight";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(460, 293);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 17);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Save Weight";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(303, 293);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Increase Weight";
             // 
             // tabPage2
             // 
@@ -369,9 +476,14 @@ namespace CaloryCalculator
             this.Controls.Add(this.tcMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Main";
+            this.Text = "FitLife";
             this.tcMain.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -381,12 +493,7 @@ namespace CaloryCalculator
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lbDishesList;
-        private System.Windows.Forms.ListBox lbIngrList;
-        private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnMassCalc;
-        private System.Windows.Forms.Button btnAddCalc;
         private System.Windows.Forms.TabControl tcMain;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -409,6 +516,19 @@ namespace CaloryCalculator
         private System.Windows.Forms.Label lblProductsProductName;
         private System.Windows.Forms.Label lblProductsName;
         private System.Windows.Forms.ListBox lbActWithProducts;
+        public System.Windows.Forms.TextBox txtRedW;
+        public System.Windows.Forms.TextBox txtSaveW;
+        public System.Windows.Forms.TextBox txtIncW;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox lbDish;
+        private System.Windows.Forms.TextBox tbDishS;
+        private System.Windows.Forms.Label label1;
     }
 }
 

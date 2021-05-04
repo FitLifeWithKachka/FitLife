@@ -37,12 +37,6 @@ namespace CaloryCalculator
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtHight = new System.Windows.Forms.TextBox();
             this.txtWeight = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtIncW = new System.Windows.Forms.TextBox();
-            this.txtSaveW = new System.Windows.Forms.TextBox();
-            this.txtRedW = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -119,60 +113,9 @@ namespace CaloryCalculator
             this.txtWeight.TabIndex = 7;
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(239, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Increase Weight";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(376, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Save Weight";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(491, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 17);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Reduse Weight";
-            // 
-            // txtIncW
-            // 
-            this.txtIncW.Location = new System.Drawing.Point(242, 48);
-            this.txtIncW.Name = "txtIncW";
-            this.txtIncW.ReadOnly = true;
-            this.txtIncW.Size = new System.Drawing.Size(100, 22);
-            this.txtIncW.TabIndex = 11;
-            // 
-            // txtSaveW
-            // 
-            this.txtSaveW.Location = new System.Drawing.Point(379, 48);
-            this.txtSaveW.Name = "txtSaveW";
-            this.txtSaveW.ReadOnly = true;
-            this.txtSaveW.Size = new System.Drawing.Size(100, 22);
-            this.txtSaveW.TabIndex = 12;
-            // 
-            // txtRedW
-            // 
-            this.txtRedW.Location = new System.Drawing.Point(496, 48);
-            this.txtRedW.Name = "txtRedW";
-            this.txtRedW.ReadOnly = true;
-            this.txtRedW.Size = new System.Drawing.Size(100, 22);
-            this.txtRedW.TabIndex = 13;
-            // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(242, 151);
+            this.btnCalculate.Location = new System.Drawing.Point(245, 27);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(98, 40);
             this.btnCalculate.TabIndex = 14;
@@ -182,7 +125,7 @@ namespace CaloryCalculator
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(474, 151);
+            this.btnCancel.Location = new System.Drawing.Point(236, 153);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(107, 44);
             this.btnCancel.TabIndex = 15;
@@ -194,15 +137,9 @@ namespace CaloryCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 235);
+            this.ClientSize = new System.Drawing.Size(361, 235);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.txtRedW);
-            this.Controls.Add(this.txtSaveW);
-            this.Controls.Add(this.txtIncW);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.txtHight);
             this.Controls.Add(this.txtAge);
@@ -228,12 +165,6 @@ namespace CaloryCalculator
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtHight;
         private System.Windows.Forms.TextBox txtWeight;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtIncW;
-        private System.Windows.Forms.TextBox txtSaveW;
-        private System.Windows.Forms.TextBox txtRedW;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnCancel;
     }

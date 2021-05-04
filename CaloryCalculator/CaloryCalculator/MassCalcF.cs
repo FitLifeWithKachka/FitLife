@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CaloryCalculator
 {
+    
     public partial class MassCalcF : Form
     {
         public int age;
@@ -22,36 +23,55 @@ namespace CaloryCalculator
         {
             InitializeComponent();
             GetGender();
+           
         }
 
         private void Calc()
         {
+            Form1 fm1 = new Form1();
             double resR;
             double resS;
             double resI;
-            age = Int32.Parse(txtAge.Text);
-            hight = Int32.Parse(txtHight.Text);
-            weight = Int32.Parse(txtWeight.Text);
+            
+
             try
             {
-                if(cmbGender.Text == "Male")
-                {
-                    gender = 5;
-                }
-                else if(cmbGender.Text == "Female")
-                {
-                    gender = -161;
-                }
-
-                resS = 10 * weight + 6.25 * hight - 5 * age + gender;
-                resR = (10 * weight + 6.25 * hight - 5 * age + gender)-250;
-                resI = (10 * weight + 6.25 * hight - 5 * age + gender)+350;
-                txtSaveW.Text = resS.ToString();
-                txtIncW.Text = resI.ToString();
-                txtRedW.Text = resR.ToString();
+                age = Int32.Parse(txtAge.Text);
+                hight = Int32.Parse(txtHight.Text);
+                weight = Int32.Parse(txtWeight.Text);
+                
+                    if (cmbGender.Text == "Male")
+                    {
+                        gender = 5;
+                    }
+                    else if (cmbGender.Text == "Female")
+                    {
+                        gender = -161;
+                    }
+                    else if (string.IsNullOrEmpty(cmbGender.Text))
+                    {
+                    MessageBox.Show("Please, fill all field!!");
+                    return;
+                    }
+                    resS = 10 * weight + 6.25 * hight - 5 * age + gender;
+                    resR = (10 * weight + 6.25 * hight - 5 * age + gender) - 250;
+                    resI = (10 * weight + 6.25 * hight - 5 * age + gender) + 350;
+                    fm1.SaveW = resS.ToString();
+                    fm1.IncrW = resI.ToString();
+                    fm1.RedW = resR.ToString();
+                    this.Hide();
+                    fm1.Closed += (s, args) => this.Close();
+                    fm1.Show();
+               
             }
             catch (Exception ex)
             {
+                if ( txtAge.Text != "" || txtHight.Text != "" || txtWeight.Text != "")
+                {
+                    MessageBox.Show("Please, fill all field!!");
+                }
+                else
+                    
                 MessageBox.Show(ex.Message);
             }     
         }
@@ -68,7 +88,10 @@ namespace CaloryCalculator
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Form1 fm1 = new Form1();
+            fm1.Closed += (s, args) => this.Close();
+            fm1.Show();
         }
 
         private void txtAge_KeyPress(object sender, KeyPressEventArgs e)

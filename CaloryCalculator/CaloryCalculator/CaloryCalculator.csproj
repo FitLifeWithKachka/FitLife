@@ -165,6 +165,10 @@
       <DependentUpon>FitLifeData.edmx</DependentUpon>
       <LastGenOutput>FitLifeData.cs</LastGenOutput>
     </Content>
+    <Content Include="Images\chefd.jpg" />
+    <Content Include="Images\fatd.jpg" />
+    <Content Include="Images\normald.png" />
+    <Content Include="Images\thind.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
