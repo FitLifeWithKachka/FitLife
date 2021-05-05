@@ -65,22 +65,35 @@ namespace CaloryCalculator
                 }
             }
 
-            if (lbActWithProducts.SelectedItem != null )
-                lbActWithProducts_SelectedIndexChanged(this, new EventArgs());
-
-            if (lbActWithDishes.SelectedItem != null)
-                lbActWithDishes_SelectedIndexChanged(this, new EventArgs());
-
+            lbActWithProducts_SelectedIndexChanged(this, new EventArgs());
+            lbActWithDishes_SelectedIndexChanged(this, new EventArgs());
         }
 
         private void lbActWithProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lbActWithProducts.SelectedItem == null)
+            {
+                lblProductsProductName.Text = "Empty";
+                lblProductsProductCalories.Text = "0";
+                return; 
+            }
+
             lblProductsProductName.Text = ((Product)lbActWithProducts.SelectedItem).Name;
             lblProductsProductCalories.Text = ((Product)lbActWithProducts.SelectedItem).Calories.ToString();
         }
 
         private void lbActWithDishes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lbActWithDishes.SelectedItem == null)
+            {
+                lblDishesDishName.Text = "Empty";
+                lblDishesDishCalories.Text = "0";
+
+                lbDishesProducts.DataSource = new List<DishInfo>();
+                lbDishesProducts.DisplayMember = "Name";
+                return;
+            }
+
             lblDishesDishName.Text = ((DishInfo)lbActWithDishes.SelectedItem).Name;
             lblDishesDishCalories.Text = ((DishInfo)lbActWithDishes.SelectedItem).Calories.ToString();
 
@@ -127,11 +140,11 @@ namespace CaloryCalculator
                 UpdateMyData();
             }
 
-            if (lbActWithProducts.Items.Count == 0)
-            {
-                lblProductsProductCalories.Text = string.Empty;
-                lblProductsProductName.Text = string.Empty;
-            }
+            //if (lbActWithProducts.Items.Count == 0)
+            //{
+            //    lblProductsProductCalories.Text = string.Empty;
+            //    lblProductsProductName.Text = string.Empty;
+            //}
         }
 
         private void DishKiller(FitLifeDataContent fc ,int id)
@@ -181,24 +194,22 @@ namespace CaloryCalculator
                 UpdateMyData();
             }
 
-            if (lbActWithDishes.Items.Count == 0)
-            {
-                lbDishesProducts.Items?.Clear();
-                lblDishesDishCalories.Text = string.Empty;
-                lblDishesDishName.Text = string.Empty;
-            }
+            //if (lbActWithDishes.Items.Count == 0)
+            //{
+            //    lbDishesProducts.Items?.Clear();
+            //    lblDishesDishCalories.Text = string.Empty;
+            //    lblDishesDishName.Text = string.Empty;
+            //}
 
         }
 
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         private void btnMassCalc_Click(object sender, EventArgs e)
         {
-            MassCalcF mc = new MassCalcF();
-            
-                this.Hide();
-                mc.Closed += (s, args) => this.Close();
-                mc.Show();
-            
+            using (MassCalcF mc = new MassCalcF(this))
+            {
+                mc.ShowDialog();
+            }
         }
 
         private void Finder()
@@ -221,7 +232,7 @@ namespace CaloryCalculator
                 return;
             }
 
-
+            //Finder();
             Task.Run(Finder);
         }
     }

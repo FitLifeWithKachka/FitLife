@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,18 +18,18 @@ namespace CaloryCalculator
         public int hight;
         public int weight;
         public int gender;
-        
-        
-        public MassCalcF()
+
+        Form1 fm1;
+
+        public MassCalcF(Form1 main)
         {
             InitializeComponent();
             GetGender();
-           
+            fm1 = main;
         }
 
         private void Calc()
         {
-            Form1 fm1 = new Form1();
             double resR;
             double resS;
             double resI;
@@ -59,9 +60,8 @@ namespace CaloryCalculator
                     fm1.SaveW = resS.ToString();
                     fm1.IncrW = resI.ToString();
                     fm1.RedW = resR.ToString();
-                    this.Hide();
-                    fm1.Closed += (s, args) => this.Close();
-                    fm1.Show();
+
+                    this.Close();
                
             }
             catch (Exception ex)
@@ -75,6 +75,7 @@ namespace CaloryCalculator
                 MessageBox.Show(ex.Message);
             }     
         }
+
         private void GetGender()
         {
             cmbGender.Items.Add("Male");
@@ -88,10 +89,7 @@ namespace CaloryCalculator
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 fm1 = new Form1();
-            fm1.Closed += (s, args) => this.Close();
-            fm1.Show();
+            Close();
         }
 
         private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
